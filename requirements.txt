@@ -1,0 +1,7 @@
+tensorflow
+numpy
+scipy
+sklearn
+reuqests
+jupyter
+matplotlib
