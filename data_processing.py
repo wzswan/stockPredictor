@@ -16,6 +16,7 @@ def rnn_data(data, time_steps, labels=False):
          -> labels == True [3,4,5]
     """
     rnn_df = []
+    data_ = []
     for i in range(len(data) - time_steps):
         if labels:
             try:
@@ -23,12 +24,12 @@ def rnn_data(data, time_steps, labels=False):
             except AttributeError:
                 rnn_df.append(data.iloc[i + time_steps])
         else:
-            data = data.iloc[i: i + time_steps].as_matrix()
+            data_ = data.iloc[i: i + time_steps].as_matrix()
             rnn_df.append(data_ if len(data_.shape) > 1 else [[i] for i in data_])
 
     return np.array(rnn_df, dtype= np.float32)
 
-def split_data(data, val_size=0.1, time_steps=0.1):
+def split_data(data, val_size=0.1, test_size=0.1):
     """
     splits data to training, validation and testing parts
     """
