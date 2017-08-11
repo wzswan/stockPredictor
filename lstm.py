@@ -6,7 +6,7 @@ from tensorflow.python.framework import dtypes
 from tensorflow.contrib import learn as tflearn
 from tensorflow.contrib import layers as tflayers
 
-def lstm_model(num_units, rnn_layers, dense_layers= None, learning_rate=0.1, optimizer='Adagrad'):
+def lstm_model(num_units, rnn_layers, dense_layers= None, learning_rate= 0.1, optimizer='Adagrad'):
     """
     Creates a deep model based on:
         * stacked lstm cells
@@ -50,8 +50,11 @@ def lstm_model(num_units, rnn_layers, dense_layers= None, learning_rate=0.1, opt
         output, layers = tf.contrib.rnn.static_rnn(stacked_lstm, x_, dtype=dtypes.float32)
         output = dnn_layers(output[-1], dense_layers)
         prediction, loss = tflearn.models.linear_regression(output, y)
+
+
         train_op = tf.contrib.layers.optimize_loss(
-            loss, tf.contrib.framework.get_global_step, optimizer=optimizer,
-            learning_rate= learning_rate)
+            loss, tf.contrib.framework.get_global_step(), optimizer=optimizer,
+            learning_rate= learning_rate
+            )
         return prediction, loss, train_op
     return _lstm_model
