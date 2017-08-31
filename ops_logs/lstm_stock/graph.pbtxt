@@ -166,7 +166,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -196,9 +196,6 @@ node {
         shape {
           dim {
             size: -1
-          }
-          dim {
-            size: 3
           }
         }
       }
@@ -237,7 +234,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -245,7 +242,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -253,7 +250,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -261,7 +258,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -269,7 +266,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -277,7 +274,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -285,7 +282,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -293,7 +290,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -301,7 +298,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         shape {
@@ -309,7 +306,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -809,7 +806,7 @@ node {
             size: 2
           }
         }
-        tensor_content: "\010\000\000\000\024\000\000\000"
+        tensor_content: "\006\000\000\000\024\000\000\000"
       }
     }
   }
@@ -847,7 +844,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
         }
-        float_val: -0.462910056114
+        float_val: -0.480384469032
       }
     }
   }
@@ -885,7 +882,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
         }
-        float_val: 0.462910056114
+        float_val: 0.480384469032
       }
     }
   }
@@ -914,7 +911,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -996,7 +993,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -1031,7 +1028,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -1058,7 +1055,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -1084,7 +1081,7 @@ node {
     value {
       shape {
         dim {
-          size: 8
+          size: 6
         }
         dim {
           size: 20
@@ -1124,7 +1121,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -1162,7 +1159,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -1235,7 +1232,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -1922,7 +1919,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -2446,7 +2443,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -2970,7 +2967,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -3494,7 +3491,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -4018,7 +4015,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -4542,7 +4539,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -5066,7 +5063,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -5590,7 +5587,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -6114,7 +6111,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -8074,7 +8071,7 @@ node {
             size: 2
           }
         }
-        tensor_content: "\n\000\000\000\003\000\000\000"
+        tensor_content: "\n\000\000\000\001\000\000\000"
       }
     }
   }
@@ -8112,7 +8109,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
         }
-        float_val: -0.679366230965
+        float_val: -0.73854893446
       }
     }
   }
@@ -8150,7 +8147,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
         }
-        float_val: 0.679366230965
+        float_val: 0.73854893446
       }
     }
   }
@@ -8182,7 +8179,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8264,7 +8261,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8299,7 +8296,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8326,7 +8323,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8352,7 +8349,7 @@ node {
           size: 10
         }
         dim {
-          size: 3
+          size: 1
         }
       }
     }
@@ -8392,7 +8389,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8438,7 +8435,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8484,7 +8481,7 @@ node {
             size: 1
           }
         }
-        int_val: 3
+        int_val: 1
       }
     }
   }
@@ -8522,7 +8519,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
         }
-        float_val: -1.0
+        float_val: -1.73205077648
       }
     }
   }
@@ -8560,7 +8557,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
         }
-        float_val: 1.0
+        float_val: 1.73205077648
       }
     }
   }
@@ -8589,7 +8586,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8668,7 +8665,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8700,7 +8697,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8724,7 +8721,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8747,7 +8744,7 @@ node {
     value {
       shape {
         dim {
-          size: 3
+          size: 1
         }
       }
     }
@@ -8784,7 +8781,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8827,7 +8824,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8956,7 +8953,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -8995,7 +8992,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -9009,10 +9006,9 @@ node {
   }
 }
 node {
-  name: "linear_regression/mean_squared_error_regressor/mean_squared_error/Sub"
-  op: "Sub"
+  name: "linear_regression/mean_squared_error_regressor/Squeeze"
+  op: "Squeeze"
   input: "linear_regression/mean_squared_error_regressor/xw_plus_b"
-  input: "output"
   attr {
     key: "T"
     value {
@@ -9027,8 +9023,37 @@ node {
           dim {
             size: -1
           }
+        }
+      }
+    }
+  }
+  attr {
+    key: "squeeze_dims"
+    value {
+      list {
+        i: 1
+      }
+    }
+  }
+}
+node {
+  name: "linear_regression/mean_squared_error_regressor/mean_squared_error/Sub"
+  op: "Sub"
+  input: "linear_regression/mean_squared_error_regressor/Squeeze"
+  input: "output"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_output_shapes"
+    value {
+      list {
+        shape {
           dim {
-            size: 3
+            size: -1
           }
         }
       }
@@ -9052,9 +9077,6 @@ node {
         shape {
           dim {
             size: -1
-          }
-          dim {
-            size: 3
           }
         }
       }
@@ -9100,7 +9122,7 @@ node {
       list {
         shape {
           dim {
-            size: 2
+            size: 1
           }
         }
       }
@@ -9119,10 +9141,10 @@ node {
         dtype: DT_INT32
         tensor_shape {
           dim {
-            size: 2
+            size: 1
           }
         }
-        tensor_content: "\000\000\000\000\001\000\000\000"
+        int_val: 0
       }
     }
   }
@@ -9263,7 +9285,7 @@ node {
       list {
         shape {
           dim {
-            size: 2
+            size: 1
           }
         }
       }
@@ -12097,7 +12119,7 @@ node {
       list {
         shape {
           dim {
-            size: 2
+            size: 1
           }
         }
       }
@@ -12116,10 +12138,10 @@ node {
         dtype: DT_INT32
         tensor_shape {
           dim {
-            size: 2
+            size: 1
           }
         }
-        tensor_content: "\001\000\000\000\001\000\000\000"
+        int_val: 1
       }
     }
   }
@@ -12149,9 +12171,6 @@ node {
           dim {
             size: 1
           }
-          dim {
-            size: 1
-          }
         }
       }
     }
@@ -12173,7 +12192,7 @@ node {
       list {
         shape {
           dim {
-            size: 2
+            size: 1
           }
         }
       }
@@ -12210,9 +12229,6 @@ node {
         shape {
           dim {
             size: -1
-          }
-          dim {
-            size: 3
           }
         }
       }
@@ -12851,9 +12867,6 @@ node {
           dim {
             size: -1
           }
-          dim {
-            size: 3
-          }
         }
       }
     }
@@ -12878,9 +12891,6 @@ node {
           dim {
             size: -1
           }
-          dim {
-            size: 3
-          }
         }
       }
     }
@@ -12889,7 +12899,7 @@ node {
 node {
   name: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/mean_squared_error/Sub_grad/Shape"
   op: "Shape"
-  input: "linear_regression/mean_squared_error_regressor/xw_plus_b"
+  input: "linear_regression/mean_squared_error_regressor/Squeeze"
   attr {
     key: "T"
     value {
@@ -12902,7 +12912,7 @@ node {
       list {
         shape {
           dim {
-            size: 2
+            size: 1
           }
         }
       }
@@ -12931,7 +12941,7 @@ node {
       list {
         shape {
           dim {
-            size: 2
+            size: 1
           }
         }
       }
@@ -13032,9 +13042,6 @@ node {
           dim {
             size: -1
           }
-          dim {
-            size: 3
-          }
         }
       }
     }
@@ -13120,9 +13127,6 @@ node {
           dim {
             size: -1
           }
-          dim {
-            size: 3
-          }
         }
       }
     }
@@ -13161,9 +13165,6 @@ node {
           dim {
             size: -1
           }
-          dim {
-            size: 3
-          }
         }
       }
     }
@@ -13196,18 +13197,15 @@ node {
           dim {
             size: -1
           }
-          dim {
-            size: 3
-          }
         }
       }
     }
   }
 }
 node {
-  name: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/xw_plus_b_grad/BiasAddGrad"
-  op: "BiasAddGrad"
-  input: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/mean_squared_error/Sub_grad/tuple/control_dependency"
+  name: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/Squeeze_grad/Shape"
+  op: "Shape"
+  input: "linear_regression/mean_squared_error_regressor/xw_plus_b"
   attr {
     key: "T"
     value {
@@ -13220,7 +13218,69 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 2
+          }
+        }
+      }
+    }
+  }
+  attr {
+    key: "out_type"
+    value {
+      type: DT_INT32
+    }
+  }
+}
+node {
+  name: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/Squeeze_grad/Reshape"
+  op: "Reshape"
+  input: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/mean_squared_error/Sub_grad/tuple/control_dependency"
+  input: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/Squeeze_grad/Shape"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "Tshape"
+    value {
+      type: DT_INT32
+    }
+  }
+  attr {
+    key: "_output_shapes"
+    value {
+      list {
+        shape {
+          dim {
+            size: -1
+          }
+          dim {
+            size: 1
+          }
+        }
+      }
+    }
+  }
+}
+node {
+  name: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/xw_plus_b_grad/BiasAddGrad"
+  op: "BiasAddGrad"
+  input: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/Squeeze_grad/Reshape"
+  attr {
+    key: "T"
+    value {
+      type: DT_FLOAT
+    }
+  }
+  attr {
+    key: "_output_shapes"
+    value {
+      list {
+        shape {
+          dim {
+            size: 1
           }
         }
       }
@@ -13236,13 +13296,13 @@ node {
 node {
   name: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/xw_plus_b_grad/tuple/group_deps"
   op: "NoOp"
-  input: "^OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/mean_squared_error/Sub_grad/tuple/control_dependency"
+  input: "^OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/Squeeze_grad/Reshape"
   input: "^OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/xw_plus_b_grad/BiasAddGrad"
 }
 node {
   name: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/xw_plus_b_grad/tuple/control_dependency"
   op: "Identity"
-  input: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/mean_squared_error/Sub_grad/tuple/control_dependency"
+  input: "OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/Squeeze_grad/Reshape"
   input: "^OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/xw_plus_b_grad/tuple/group_deps"
   attr {
     key: "T"
@@ -13254,7 +13314,7 @@ node {
     key: "_class"
     value {
       list {
-        s: "loc:@OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/mean_squared_error/Sub_grad/Reshape"
+        s: "loc:@OptimizeLoss/gradients/linear_regression/mean_squared_error_regressor/Squeeze_grad/Reshape"
       }
     }
   }
@@ -13267,7 +13327,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -13299,7 +13359,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -13365,7 +13425,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -13453,7 +13513,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -15964,7 +16024,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -16000,7 +16060,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -16056,7 +16116,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -16088,7 +16148,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -16351,7 +16411,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -18372,7 +18432,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -18408,7 +18468,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -18464,7 +18524,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -18496,7 +18556,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -18759,7 +18819,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -20780,7 +20840,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -20816,7 +20876,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -20872,7 +20932,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -20904,7 +20964,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -21167,7 +21227,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -23188,7 +23248,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -23224,7 +23284,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -23280,7 +23340,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -23312,7 +23372,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -23575,7 +23635,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -25596,7 +25656,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -25632,7 +25692,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -25688,7 +25748,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -25720,7 +25780,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -25983,7 +26043,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -28004,7 +28064,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -28040,7 +28100,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -28096,7 +28156,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -28128,7 +28188,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -28391,7 +28451,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -30412,7 +30472,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -30448,7 +30508,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -30504,7 +30564,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -30536,7 +30596,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -30799,7 +30859,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -32820,7 +32880,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -32856,7 +32916,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -32912,7 +32972,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -32944,7 +33004,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -33207,7 +33267,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -35228,7 +35288,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -35264,7 +35324,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -35320,7 +35380,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -35352,7 +35412,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -35615,7 +35675,7 @@ node {
             size: -1
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -37636,7 +37696,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -37672,7 +37732,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -37728,7 +37788,7 @@ node {
             size: -1
           }
           dim {
-            size: 8
+            size: 6
           }
         }
       }
@@ -37760,7 +37820,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -37855,7 +37915,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -37933,7 +37993,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -37955,7 +38015,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -37983,7 +38043,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -38009,7 +38069,7 @@ node {
     value {
       shape {
         dim {
-          size: 8
+          size: 6
         }
         dim {
           size: 20
@@ -38049,7 +38109,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -38095,7 +38155,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -39016,7 +39076,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39038,7 +39098,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
         float_val: 0.10000000149
@@ -39066,7 +39126,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39092,7 +39152,7 @@ node {
           size: 10
         }
         dim {
-          size: 3
+          size: 1
         }
       }
     }
@@ -39132,7 +39192,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39178,7 +39238,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39202,7 +39262,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39221,7 +39281,7 @@ node {
         dtype: DT_FLOAT
         tensor_shape {
           dim {
-            size: 3
+            size: 1
           }
         }
         float_val: 0.10000000149
@@ -39246,7 +39306,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39269,7 +39329,7 @@ node {
     value {
       shape {
         dim {
-          size: 3
+          size: 1
         }
       }
     }
@@ -39306,7 +39366,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39349,7 +39409,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39383,7 +39443,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -39635,7 +39695,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -39675,7 +39735,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -42810,7 +42870,7 @@ node {
         dtype: DT_STRING
         tensor_shape {
         }
-        string_val: "_temp_c08ab40a7a5645348113f3b43c63dd84/part"
+        string_val: "_temp_01e26a53f4b54b38b1f679d65f13a820/part"
       }
     }
   }
@@ -44003,7 +44063,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -44147,7 +44207,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -44429,7 +44489,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
@@ -45281,7 +45341,7 @@ node {
       list {
         shape {
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -45425,7 +45485,7 @@ node {
             size: 10
           }
           dim {
-            size: 3
+            size: 1
           }
         }
       }
@@ -45707,7 +45767,7 @@ node {
       list {
         shape {
           dim {
-            size: 8
+            size: 6
           }
           dim {
             size: 20
