@@ -6,7 +6,7 @@ from tensorflow.python.framework import dtypes
 from tensorflow.contrib import learn as tflearn
 from tensorflow.contrib import layers as tflayers
 
-def lstm_model(num_units, rnn_layers, dense_layers= None, learning_rate= 0.1, optimizer='Adagrad'):
+def lstm_model(num_units, rnn_layers, dense_layers= None, learning_rate= 0.0001, optimizer='Adagrad'):
     """
     Creates a deep model based on:
         * stacked lstm cells
