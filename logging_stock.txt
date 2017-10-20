@@ -1,0 +1,9 @@
+Compilation Time : 0.014245271682739258
+Train on 563 samples, validate on 3 samples
+Epoch 1/1
+563/563 [==============================] - 25s - loss: 0.0026 - val_loss: 7.4976e-04
+Training duration (s): 27.23909878730774
+MSE: 0.000378
+
+
+using stock data for prediction

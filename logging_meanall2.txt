@@ -1,0 +1,10 @@
+ompilation Time : 0.014273881912231445
+Train on 563 samples, validate on 3 samples
+Epoch 1/1
+563/563 [==============================] - 25s - loss: 0.0033 - val_loss: 0.0044
+Training duration (s): 27.358418226242065
+MSE: 0.001778
+
+
+
+all meanall testing

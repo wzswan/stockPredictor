@@ -1,0 +1,6 @@
+Train on 563 samples, validate on 3 samples
+Epoch 1/1
+563/563 [==============================] - 25s - loss: 0.0133 - val_loss: 0.0025
+Training duration (s): 27.902758359909058
+MSE: 0.318588
+

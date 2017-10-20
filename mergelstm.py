@@ -1,14 +1,12 @@
-#from __future__ import division
-
 import os
 import time
 import warnings
 import numpy as np
 from numpy import newaxis
-from keras.layers.core import Dense, Activation, Dropout
+from keras.layers.core import Dense, Activation, Dropout, Merge
+from keras.layers import recurrent
 from keras.layers.recurrent import LSTM
 from keras.models import Sequential
-
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # hide messy Tensorflow warings
 warnings.filterwarnings("ignore") # Hide messy Numpy warnings
@@ -28,7 +26,7 @@ def load_data(filename, seq_len, normalise_window):
 
     result = np.array(result)
     # select 90% data as training data
-    row = round(0.9 * result.shape[0])
+    row = round(0.55 * result.shape[0])
     train = result[:int(row), :]
     # random sorted training data
     #np.random.shuffle(train)
