@@ -28,7 +28,7 @@ def load_data(filename, seq_len, normalise_window):
 
     result = np.array(result)
     # select 90% data as training data
-    row = round(0.9 * result.shape[0])
+    row = round(0.99411 * result.shape[0])
     train = result[:int(row), :]
     # random sorted training data
     #np.random.shuffle(train)
@@ -58,11 +58,13 @@ def build_model(layers):
         output_dim=layers[1],
         return_sequences=True))
     model.add(Dropout(0.2))
+    #model.add(Activation('relu'))
 
     model.add(LSTM(
         layers[2],
         return_sequences=False))
     model.add(Dropout(0.2))
+    #model.add(Activation('relu'))
 
     model.add(Dense(
         output_dim=layers[3]))

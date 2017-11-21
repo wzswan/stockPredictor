@@ -1,12 +1,17 @@
+#from __future__ import division
+
 import os
 import time
 import warnings
 import numpy as np
+import keras
 from numpy import newaxis
-from keras.layers.core import Dense, Activation, Dropout, Merge
-from keras.layers import recurrent
+from keras.layers.core import  Activation, Dropout
 from keras.layers.recurrent import LSTM
-from keras.models import Sequential
+from keras.models import Model
+from keras.layers import Input, Embedding,LSTM, Dense
+
+
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # hide messy Tensorflow warings
 warnings.filterwarnings("ignore") # Hide messy Numpy warnings
@@ -26,7 +31,8 @@ def load_data(filename, seq_len, normalise_window):
 
     result = np.array(result)
     # select 90% data as training data
-    row = round(0.55 * result.shape[0])
+    rest = result[:-5]
+    row =  rest.shape[0]
     train = result[:int(row), :]
     # random sorted training data
     #np.random.shuffle(train)
@@ -48,35 +54,45 @@ def normalise_windows(window_data):
         normalised_data.append(normalise_window)
     return normalised_data
 
+
+
 def build_model(layers):
-    model = Sequential()
 
-    model.add(LSTM(
-        input_shape=(layers[1], layers[0]),
-        output_dim=layers[1],
-        return_sequences=True))
-    model.add(Dropout(0.2))
+    main_input = Input(shape=(layers[0],), dtype='float64', name='main_input')
 
-    model.add(LSTM(
-        layers[2],
-        return_sequences=False))
-    model.add(Dropout(0.2))
+    embed= Embedding(output_dim=512, input_dim=10000, input_length=10)(main_input)
 
-    model.add(Dense(
-        output_dim=layers[3]))
-    model.add(Activation("linear"))
+    lstm_out= LSTM(layers[1])(embed)
 
+    auxiliary_output = Dense(layers[2], activation='linear', name='aux_output')(lstm_out)
+
+    auxiliary_input = Input(shape=(layers[3],), name='aux_input')
+
+    merge1 = keras.layers.concatenate([lstm_out, auxiliary_input])
+    embed2= Embedding(output_dim=512, input_dim=10000, input_length=10)(merge1)
+    lstm_out2= LSTM(layers[4])(embed2)
+
+    auxiliary_output2 = Dense(layers[5], activation='linear', name='aux_output2')(lstm_out2)
+
+    auxiliary_input2 = Input(shape=(layers[6],), name='aux_input2')
+    merge2 = keras.layers.concatenate([lstm_out2, auxiliary_input2 ])
+
+    x = Dense(layers[7], activation='linear')(merge2)
+
+    main_output = Dense(layers[8], activation='linear', name='main_output')(x)
+
+    inputs=[main_input, auxiliary_input, auxiliary_input2]
+    outputs=[main_output, auxiliary_output, auxiliary_output2]
+    model= Model(inputs,
+                 outputs)
     start = time.time()
-    model.compile(loss="mse", optimizer="rmsprop")
+    model.compile(optimizer='rmsprop',
+                    loss={'main_output': 'mse', 'aux_output':'mse', 'aux_output2':'mse'},
+                    loss_weights={'main_output': 1., 'aux_output': 0.2, 'aux_output2': 0.2})
     print("> Compilation Time :", time.time() - start)
     return model
 
-def predict_point_by_point(model, data):
-    #Predict each timestep given the last sequence of true data, in effect only predictiing 1 step
-    # ahead each time
-    predicted = model.predict(data)
-    predicted = np.reshape(predicted, (predicted.size,))
-    return predicted
+
 
 def predict_sequences_full(model, data, window_size):
     #Shift the window by 1 new prediction each time, re-run predictions on new window
@@ -87,16 +103,3 @@ def predict_sequences_full(model, data, window_size):
         curr_frame = curr_frame[1:]
         curr_frame = np.insert(curr_frame, [window_size-1],predicted[-1], axis=0)
     return predicted
-
-def predict_sequences_multiple(model, data, window_size, prediction_len):
-    # Prediction sequence of 50 steps before shifing prediction run forward by 50 steps
-    prediction_seqs = []
-    for i in range(int(len(data)/prediction_len)):
-        curr_frame = data[i * prediction_len]
-        predicted = []
-        for j in range(prediction_len):
-            predicted.append(model.predict(curr_frame[newaxis,:,:])[0,0])
-            curr_frame = curr_frame[1:]
-            curr_frame = np.insert(curr_frame, [window_size-1], predicted[-1], axis=0)
-        prediction_seqs.append(predicted)
-    return prediction_seqs

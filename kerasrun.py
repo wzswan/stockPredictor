@@ -2,6 +2,8 @@ import kerasLstm
 import time
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+#import statsmodels.api as sm
 from sklearn.metrics import mean_squared_error
 
 def plot_results(predicted_data, true_data):
@@ -31,8 +33,8 @@ if __name__=='__main__':
 
     print('> Loading data.....')
 
-    X_train, y_train, X_test, y_test = kerasLstm.load_data('./datacut/per11/gap11.3.csv', seq_len, True)
-    A_train, b_train, A_test, b_test = kerasLstm.load_data('./datacut/per11/gap11.3.csv', seq_len, True)
+    X_train, y_train, X_test, y_test = kerasLstm.load_data('./week/w60/stockw60.csv', seq_len, True)
+    A_train, b_train, A_test, b_test = kerasLstm.load_data('./week/w60/stockw60.csv', seq_len, True)
     print('> Data Loaded. Compiling...')
     model = kerasLstm.build_model([1,20, 100, 1])
 
@@ -51,7 +53,14 @@ if __name__=='__main__':
 
     rmse = np.sqrt(((predicted - b_test) ** 2).mean(axis=0))
     score = mean_squared_error(predicted, b_test)
+    #Mean_value = np.mean(predicted, axis= 0)
     print("MSE: %f" % score)
+    #print("MEAN %f" % Mean_value )
+    #x = np.array(A_test)
+    #xx = pd.DataFrame({'B': [x]})
+    #yy = pd.Series(predicted)
+    #res = pd.ols(y=yy,x=xx)
+    #print("RES: %f" % res)
 
     #plot_results_multiple(predicted, b_test, 20)
 
