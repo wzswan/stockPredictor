@@ -9,7 +9,8 @@ from numpy import newaxis
 from keras.layers.core import  Activation, Dropout
 from keras.layers.recurrent import LSTM
 from keras.models import Model
-from keras.layers import Input, Embedding,LSTM, Dense
+from keras.layers import Input, Embedding,LSTM, Dense,TimeDistributed
+from keras import metrics
 
 
 
@@ -58,39 +59,44 @@ def normalise_windows(window_data):
 
 def build_model(layers):
 
-    main_input = Input(shape=(layers[0],), dtype='float64', name='main_input')
-
+    #main_input=TimeDistributed(Input(shape=(layers[0],), dtype='float64', name='main_input'))
+    main_input=Input(shape=(layers[0],1,), dtype='float64', name='main_input')
     embed= Embedding(output_dim=512, input_dim=10000, input_length=10)(main_input)
 
-    lstm_out= LSTM(layers[1])(embed)
+    lstm_out= LSTM(layers[1],
+               input_shape=(layers[1],layers[0]),
+               output_dim= layers[1],
+               return_sequences=False)(embed)
 
-    auxiliary_output = Dense(layers[2], activation='linear', name='aux_output')(lstm_out)
-
+    auxiliary_output = (Dense(layers[2], activation='linear', name='aux_output'))(lstm_out)
     auxiliary_input = Input(shape=(layers[3],), name='aux_input')
+    #auxiliary_input = TimeDistributed(Input(shape=(layers[3],), name='aux_input'))
 
     merge1 = keras.layers.concatenate([lstm_out, auxiliary_input])
     embed2= Embedding(output_dim=512, input_dim=10000, input_length=10)(merge1)
     lstm_out2= LSTM(layers[4])(embed2)
 
-    auxiliary_output2 = Dense(layers[5], activation='linear', name='aux_output2')(lstm_out2)
+    auxiliary_output2 = (Dense(layers[5], activation='linear', name='aux_output2'))(lstm_out2)
 
     auxiliary_input2 = Input(shape=(layers[6],), name='aux_input2')
+    #auxiliary_input2 = TimeDistributed(Input(shape=(layers[6],), name='aux_input2'))
     merge2 = keras.layers.concatenate([lstm_out2, auxiliary_input2 ])
 
     x = Dense(layers[7], activation='linear')(merge2)
 
-    main_output = Dense(layers[8], activation='linear', name='main_output')(x)
+    main_output = (Dense(layers[8], activation='linear', name='main_output'))(x)
+    #main_output_plus = TimeDistributed(Dense(layers[8], activation='linear', name='main_output'))(x)
 
-    inputs=[main_input, auxiliary_input, auxiliary_input2]
-    outputs=[main_output, auxiliary_output, auxiliary_output2]
-    model= Model(inputs,
-                 outputs)
+
+
+    model= Model(inputs=[main_input, auxiliary_input, auxiliary_input2],
+                outputs=[main_output, auxiliary_output, auxiliary_output2])
     start = time.time()
-    model.compile(optimizer='rmsprop',
+    model.compile(optimizer='rmsprop',metrics=['accuracy'],
                     loss={'main_output': 'mse', 'aux_output':'mse', 'aux_output2':'mse'},
                     loss_weights={'main_output': 1., 'aux_output': 0.2, 'aux_output2': 0.2})
     print("> Compilation Time :", time.time() - start)
-    return model
+    return (model)
 
 
 

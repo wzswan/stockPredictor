@@ -22,7 +22,7 @@ def plot_results(predicted_data, true_data):
 
 if __name__=='__main__':
     global_start_time = time.time()
-    epochs = 1
+    epochs = 50
     seq_len = 20
 
     print('> Loading data.....')
@@ -31,7 +31,7 @@ if __name__=='__main__':
     X_train_gap, y_train_gap, X_test_gap, y_test_gap = mergelstm.load_data('./week/w1/gapw1.csv', seq_len, True)
     X_train_stock, y_train_stock, X_test_stock, y_test_stock = mergelstm.load_data('./week/w1/stockw1.csv', seq_len, True)
 
-
+    print X_train
     validation_data=({'fai_input': X_test,
                       'gap_input': X_test_gap,
                       'stock_input':X_test_stock},
@@ -44,14 +44,15 @@ if __name__=='__main__':
     """
     print('> Data Loaded. Compiling...')
 
-    model = mergelstm.build_model([5,32,3,5,128,3,5,64,3])
+    model = mergelstm.build_model([1,1,1,5,128,1,5,64,1])
 
     model.fit({'main_input': X_train, 'aux_input':  X_train_gap, 'aux_input2': X_train_stock},
                 {'main_output': y_train, 'aux_output': y_train_gap, 'aux_output2':y_train_stock},
-                nb_epoch=epochs, batch_size=32, shuffle=False,verbose = 1,
+                nb_epoch=epochs, batch_size=1, shuffle=False,verbose = 0,
                 #validation_split= 0.005)
                 validation_data=validation_data)
-
+    print (model.history['loss'])
+    print (model.history['acc'])            
 
 
 
