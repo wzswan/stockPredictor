@@ -1,5 +1,14 @@
 time training end 140828 testing end 140912
 
+fai:0.000410,keep,down
+
+gap:0.005080,keep,down
+
+stock:0.001113,up,down
+
+
+
+
 
 0.9767
 

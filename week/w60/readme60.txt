@@ -1,5 +1,15 @@
 time training end:160719 testingend 160802
 
+fai:
+
+gap:
+
+
+stock:
+
+
+
+
 0.99411
 faip  :0.008401 :down down
 gap mse:0.013977 :keep down

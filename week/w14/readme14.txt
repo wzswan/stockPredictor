@@ -1,5 +1,14 @@
 time training end 140828 testing end 140912
 
+fai:0.847486,down,keep
+
+gap:0.00098,keep,keep
+
+stock:0.000198,up,keep
+
+
+
+
 
 0.9772
 faip   :0.006939 trend:down up  

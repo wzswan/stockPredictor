@@ -1,3 +1,14 @@
+
+
+fai:0.021049, up,keep
+
+gap:0.041950,up,keep
+
+stock:0.001362,up,keep
+
+
+
+
 new
 time training end: 150415 testing end:150429
 0.9865
