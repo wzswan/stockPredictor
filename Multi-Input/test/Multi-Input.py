@@ -91,7 +91,7 @@ if __name__=='__main__':
 
     values = reframed.values
     values_stock = reframed_stock.values
-    for row in range(75, 680, 5):
+    for row in range(670, 680, 5):
         A_train, b_train, A_test, b_test = kerasLstm.load_data('./stock.csv', length, True, row)
         n_end = row + 5
         train = values[:row, :]

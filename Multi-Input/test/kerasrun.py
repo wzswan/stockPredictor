@@ -47,7 +47,7 @@ if __name__=='__main__':
     seq_len = 5
 
     print('> Loading data.....')
-    for row in range(81, 680,5):
+    for row in range(80, 680,5):
 
         X_train, y_train, X_test, y_test = kerasLstm.load_data('./stock.csv', seq_len, True, row)
         A_train, b_train, A_test, b_test = kerasLstm.load_data('./stock.csv', seq_len, True, row)
@@ -58,7 +58,7 @@ if __name__=='__main__':
             X_train,
             y_train,
             batch_size=1,
-            epochs=1,
+            epochs=30,
             validation_split=( X_test, y_test))
 
     #predicted = kerasLstm.predict_sequences_multiple(model, X_test, seq_len, 20)
