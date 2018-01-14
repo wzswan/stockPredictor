@@ -150,16 +150,14 @@ if __name__=='__main__':
                    'fai_input': train_X_fai},
                y= {'main_output':train_y_fai, 'stock_output':train_y_stock, 'gap_output':train_y_gap},
                  epochs=30, batch_size=1)
-        #history = model.fit(train_X, train_y, epochs=30, batch_size=1, validation_data=(test_X, test_y), verbose=2, shuffle=False)
-
-        #predicted = predict_sequences_full(model, test_X, seq_len)
+        
         predicted = model.predict({'stock_input':train_X_stock,'gap_input': train_X_gap,'fai_input': train_X_fai})
 
         predicted= predicted[2:3]
         predicted = np.reshape(predicted,(-1,1))
         result = predicted[:5]
 
-        #print (result, test_stock_y)
+        
         score = mean_squared_error(result, test_stock_y)
         name = []
         name = row
